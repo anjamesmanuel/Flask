@@ -1,0 +1,24 @@
+a. Result Analysis
+
+i. What happens when a user accesses /profile without logging in?
+    When a user accesses the /profile page without logging in, the application checks if there is a saved user session. 
+    If there is none, it returns an “Unauthorized” message with a 401 status code. This prevents users from viewing 
+    protected information without authentication.
+
+ii. What data is returned after successful login?
+    After a successful login, the application receives user information from GitHub through the API. 
+    The returned data usually includes the user’s name, username, profile picture, and other public account details. 
+    The app then stores this information in the session and displays it on the profile page.
+
+iii. Why is OAuth considered more secure than traditional login?
+    OAuth is considered more secure than traditional login because users do not give their passwords directly to the application. 
+    Instead, trusted services like GitHub handle the authentication process. This helps protect user credentials and reduces 
+    the risk of password theft.
+
+iv. What challenges did you encounter?
+    Some challenges encountered during the activity were setting the correct callback URL, understanding how OAuth redirects work, 
+    and fixing session or authentication errors. There were also issues with installing dependencies and handling API responses correctly.
+
+v. What did you learn from this activity?
+    From this activity, I learned how OAuth authentication works and how to connect GitHub login with a Flask application. 
+    I also learned how sessions protect routes and how APIs can be used to get user information securely.
